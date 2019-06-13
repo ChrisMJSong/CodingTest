@@ -57,22 +57,6 @@ class DetailViewController: UIViewController {
         present(safariViewController, animated: true, completion: nil)
     }
     
-    public class func changeMultiplier(constraint: NSLayoutConstraint, multiplier: CGFloat) -> NSLayoutConstraint {
-        let newConstraint = NSLayoutConstraint(
-            item: constraint.firstItem,
-            attribute: constraint.firstAttribute,
-            relatedBy: constraint.relation,
-            toItem: constraint.secondItem,
-            attribute: constraint.secondAttribute,
-            multiplier: multiplier,
-            constant: constraint.constant)
-        
-        newConstraint.priority = constraint.priority
-        NSLayoutConstraint.deactivate([constraint])
-        NSLayoutConstraint.activate([newConstraint])
-        return newConstraint
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
