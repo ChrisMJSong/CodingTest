@@ -94,10 +94,10 @@ class MasterViewController: UITableViewController {
 extension UIColor {
     static func colorWithScore(_ score: Int) -> UIColor {
         var color = UIColor.green
-        if score > 80 {
+        if score > TaskModel.TaskScore.partial.rawValue {
             // good
             color = UIColor(red:0.16, green:0.65, blue:0.10, alpha:1.00)
-        }else if score > 40 {
+        }else if score > TaskModel.TaskScore.poor.rawValue {
             // partial
             color = UIColor(red:0.99, green:0.67, blue:0.17, alpha:1.00)
         }else {
