@@ -15,7 +15,7 @@ class CodilityContent: NSObject {
         lessons.append(lesson1)
         
         var task1_1 = TaskModel(level: 1, title: "BinaryGap", description: "Find longest sequence of zeros in binary representation of an integer.")
-        task1_1.score = 77
+        task1_1.score = 100
         task1_1.link = "https://app.codility.com/demo/results/trainingKB3ANA-WT8"
         task1_1.object = Task1_1_Swift()
         tasks.append([task1_1])

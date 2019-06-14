@@ -17,7 +17,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var resultScoreLabel: UILabel!
     @IBOutlet weak var bigScoreLabel: UILabel!
     @IBOutlet weak var progressScoreLabel: UILabel!
-    @IBOutlet weak var constaintScoreProgressEqualWidth: NSLayoutConstraint!
+    @IBOutlet weak var difficultyLabel: UILabel!
+    @IBOutlet weak var constraintScoreProgressWidth: NSLayoutConstraint!
     
     func configureView() {
         // Update view for the task info
@@ -45,6 +46,22 @@ class DetailViewController: UIViewController {
         if let label = resultScoreLabel {
             label.text = "\(task.score) out of \(task.maxScore) points"
         }
+        
+        // Difficulty
+        difficultyLabel.text = task.difficulty.resultString()
+        difficultyLabel.transform = CGAffineTransform(rotationAngle: -CGFloat.pi / 2)
+        if let diffBGView = difficultyLabel.superview {
+            diffBGView.backgroundColor = task.difficulty.color()
+        }
+        
+        // Progress
+        guard let progressBar = progressScoreLabel.superview, let progressBG  = progressBar.superview else { return }
+        
+        // 최대 가로 길이는 bg.width - progresslabel.width
+        let maxProgressWidth = progressBG.bounds.width - (progressScoreLabel.bounds.width + 8)
+        
+        constraintScoreProgressWidth.constant = CGFloat(100 - task.score * 100 / task.maxScore) / 100 * maxProgressWidth
+        progressBar.backgroundColor = task.scoreLevel.color()
     }
     
     func runTask() {
@@ -60,6 +77,11 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         configureView()
     }
     

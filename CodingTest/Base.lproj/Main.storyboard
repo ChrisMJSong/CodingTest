@@ -83,23 +83,33 @@
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POd-8I-fBC" userLabel="Progress">
                                                                 <rect key="frame" x="0.0" y="0.0" width="195" height="40"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-pI-o6M">
+                                                                        <rect key="frame" x="141" y="9.5" width="46" height="21"/>
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
                                                                 <color key="backgroundColor" red="0.34775140881538391" green="0.71683889627456665" blue="0.33002114295959473" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="9f9-pI-o6M" firstAttribute="centerY" secondItem="POd-8I-fBC" secondAttribute="centerY" id="NXf-Yo-kpr"/>
+                                                                    <constraint firstAttribute="trailing" secondItem="9f9-pI-o6M" secondAttribute="trailing" constant="8" id="f3w-XK-74S"/>
+                                                                    <constraint firstItem="9f9-pI-o6M" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="POd-8I-fBC" secondAttribute="leading" constant="8" id="rH9-o8-Hil"/>
+                                                                </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="4"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
                                                             </view>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f9-pI-o6M">
-                                                                <rect key="frame" x="139" y="9.5" width="46" height="21"/>
-                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.93497985601425171" green="0.93226343393325806" blue="0.93166083097457886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="POd-8I-fBC" firstAttribute="leading" secondItem="0Bo-MV-FCI" secondAttribute="leading" id="46i-az-Pnz"/>
-                                                            <constraint firstItem="POd-8I-fBC" firstAttribute="width" secondItem="0Bo-MV-FCI" secondAttribute="width" id="7Sw-Uj-oLv"/>
                                                             <constraint firstAttribute="height" constant="40" id="DAX-Cf-Jmp"/>
                                                             <constraint firstItem="POd-8I-fBC" firstAttribute="top" secondItem="0Bo-MV-FCI" secondAttribute="top" id="PJo-xy-M0g"/>
-                                                            <constraint firstItem="9f9-pI-o6M" firstAttribute="centerY" secondItem="0Bo-MV-FCI" secondAttribute="centerY" id="hIO-n9-6yS"/>
-                                                            <constraint firstAttribute="trailing" secondItem="9f9-pI-o6M" secondAttribute="trailing" constant="10" id="pYe-9g-al2"/>
+                                                            <constraint firstAttribute="trailing" secondItem="POd-8I-fBC" secondAttribute="trailing" id="aDO-BW-1Yd"/>
                                                             <constraint firstAttribute="bottom" secondItem="POd-8I-fBC" secondAttribute="bottom" id="pt3-pJ-LE2"/>
                                                         </constraints>
                                                     </view>
@@ -139,8 +149,18 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXS-0x-25Y">
                                                         <rect key="frame" x="0.0" y="0.0" width="20" height="65.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MEDIUM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUb-Qg-Uqx">
+                                                                <rect key="frame" x="-15.5" y="25.5" width="51" height="14.5"/>
+                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
                                                         <color key="backgroundColor" red="0.95175439119338989" green="0.69361585378646851" blue="0.2947438657283783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
+                                                            <constraint firstItem="fUb-Qg-Uqx" firstAttribute="centerX" secondItem="SXS-0x-25Y" secondAttribute="centerX" id="Z9m-ss-SrW"/>
+                                                            <constraint firstItem="fUb-Qg-Uqx" firstAttribute="centerY" secondItem="SXS-0x-25Y" secondAttribute="centerY" id="eg0-Xd-ZBd"/>
                                                             <constraint firstAttribute="width" constant="20" id="jlm-lX-w2m"/>
                                                         </constraints>
                                                     </view>
@@ -221,7 +241,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="wQW-FG-J4e"/>
                                                 </constraints>
-                                                <state key="normal" title="READ MORE">
+                                                <state key="normal" title="SWIFT 4.0">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
@@ -307,8 +327,9 @@
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="bigScoreLabel" destination="g1j-Fl-RHv" id="BrO-lk-ugO"/>
-                        <outlet property="constaintScoreProgressEqualWidth" destination="7Sw-Uj-oLv" id="9ew-EC-kKJ"/>
+                        <outlet property="constraintScoreProgressWidth" destination="aDO-BW-1Yd" id="Tvc-Xs-krG"/>
                         <outlet property="detailDescriptionLabel" destination="e15-OX-9Vf" id="khY-Iw-O5l"/>
+                        <outlet property="difficultyLabel" destination="fUb-Qg-Uqx" id="xFj-8A-EKb"/>
                         <outlet property="progressScoreLabel" destination="9f9-pI-o6M" id="X4j-69-nyG"/>
                         <outlet property="resultScoreLabel" destination="3CK-NL-wf6" id="YAk-U7-Lev"/>
                         <outlet property="taskDetailsGoalLabel" destination="zq8-z2-3tp" id="VAM-NC-nuN"/>
