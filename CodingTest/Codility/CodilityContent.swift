@@ -19,5 +19,15 @@ class CodilityContent: NSObject {
         task1_1.link = "https://app.codility.com/demo/results/trainingKB3ANA-WT8"
         task1_1.object = Task1_1_Swift()
         tasks.append([task1_1])
+        
+        // LESSON 2
+        let lesson2 = LessonModel(level: 2, title: "Array")
+        lessons.append(lesson2)
+        
+        var task2_1 = TaskModel(level: 1, title: "OddOccurrencesInArray", description: "Find value that occurs in odd number of elements.")
+        task2_1.score = 100
+        task2_1.link = "https://app.codility.com/demo/results/trainingX6JYHQ-2SX"
+        task2_1.object = Task1_1_Swift()
+        tasks.append([task2_1])
     }
 }
